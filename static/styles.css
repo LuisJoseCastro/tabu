@@ -1,0 +1,87 @@
+/* Animación para los cuadrados */
+@keyframes floatUpDown {
+    0%,
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-20px) scale(1.1);
+        opacity: 0.5;
+    }
+}
+.square {
+    position: absolute;
+    /* border-radius eliminado para que sean cuadrados */
+    opacity: 0.3;
+    animation: floatUpDown 6s ease-in-out infinite;
+}
+.square1 {
+    width: 200px;
+    height: 200px;
+    background: #7c3aed; /* violeta-600 */
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+}
+.square2 {
+    width: 150px;
+    height: 150px;
+    background: #6d28d9; /* violeta-700 */
+    top: 70%;
+    left: 15%;
+    animation-delay: 2s;
+}
+.square3 {
+    width: 250px;
+    height: 250px;
+    background: #a78bfa; /* violeta-400 */
+    top: 30%;
+    right: 10%;
+    animation-delay: 4s;
+}
+.square4 {
+    width: 100px;
+    height: 100px;
+    background: #8b5cf6; /* violeta-400 */
+    bottom: 15%;
+    right: 25%;
+    animation-delay: 1s;
+}
+.square5 {
+    width: 120px;
+    height: 120px;
+    background: #9333ea; /* violeta-500 */
+    bottom: 5%;
+    left: 40%;
+    animation-delay: 3s;
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-in-out;
+}
+.animate-fade-in-fast {
+    animation: fadeIn 0.4s ease-in-out;
+}
+.animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
